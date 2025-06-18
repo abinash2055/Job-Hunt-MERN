@@ -1,0 +1,17 @@
+	1. To start server ---->  npm run dev
+	2. MongoDB
+		a. Project Name ----> JobPortal
+		b. Username ----> abinashnathpandey
+		c. Password ----> WO8tBC2B0spTByMX
+		d. URL ---->  mongodb+srv://abinashnathpandey:WO8tBC2B0spTByMX@cluster0.7oy1lqq.mongodb.net/
+		e. SECRET_KEY => kgdfmhndfntlrgnwseerf
+
+
+		Login and Signup database and 
+		  Functionally not working
+
+		Time ----->  5.09.20 error
+		Time ----->  7.08.20 error
+		Time ----->  9.04.45  
+
+		

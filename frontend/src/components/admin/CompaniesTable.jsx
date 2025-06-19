@@ -10,16 +10,17 @@ const CompaniesTable = () => {
     const { companies, searchCompanyByText } = useSelector(store => store.company);
     const [filterCompany, setFilterCompany] = useState(companies);
     const navigate = useNavigate();
+
     useEffect(() => {
         const filteredCompany = companies.length >= 0 && companies.filter((company) => {
             if (!searchCompanyByText) {
                 return true
             };
             return company?.name?.toLowerCase().includes(searchCompanyByText.toLowerCase());
-
         });
         setFilterCompany(filteredCompany);
     }, [companies, searchCompanyByText])
+
     return (
         <div>
             <Table>
@@ -35,14 +36,14 @@ const CompaniesTable = () => {
                 <TableBody>
                     {
                         filterCompany?.map((company) => (
-                            <tr>
+                            <tr key={company._id}>
                                 <TableCell>
                                     <Avatar>
                                         <AvatarImage src={company.logo} />
                                     </Avatar>
                                 </TableCell>
                                 <TableCell>{company.name}</TableCell>
-                                <TableCell>{company.createdAt.split("T")[0]}</TableCell>
+                                <TableCell>{company.createdAt?.split("T")[0]}</TableCell>
                                 <TableCell className="text-right cursor-pointer">
                                     <Popover>
                                         <PopoverTrigger><MoreHorizontal /></PopoverTrigger>
@@ -55,7 +56,6 @@ const CompaniesTable = () => {
                                     </Popover>
                                 </TableCell>
                             </tr>
-
                         ))
                     }
                 </TableBody>

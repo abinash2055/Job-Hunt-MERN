@@ -5,14 +5,14 @@ const isAuthenticated = async (req, res, next) => {
     const token = req.cookies?.token;
     if (!token) {
       return res.status(401).json({
-        message: "User not authenticated",
+        message: "User not authenticated....",
         success: false,
       });
     }
     const decode = jwt.verify(token, process.env.SECRET_KEY);
     if (!decode) {
       return res.status(401).json({
-        message: "Invalid token",
+        message: "Invalid token....",
         success: false,
       });
     }
@@ -21,7 +21,7 @@ const isAuthenticated = async (req, res, next) => {
   } catch (error) {
     console.error("Auth middleware error:", error);
     return res.status(500).json({
-      message: "Internal server error in authentication",
+      message: "Internal server error in authentication.....",
       success: false,
     });
   }

@@ -28,7 +28,7 @@ export const postJob = async (req, res) => {
       !companyId
     ) {
       return res.status(400).json({
-        message: "Somethin is missing.",
+        message: "Something is missing.....",
         success: false,
       });
     }
@@ -45,7 +45,7 @@ export const postJob = async (req, res) => {
       created_by: userId,
     });
     return res.status(201).json({
-      message: "New job created successfully.",
+      message: "New job created successfully......",
       job,
       success: true,
     });
@@ -71,7 +71,7 @@ export const getAllJobs = async (req, res) => {
       .sort({ createdAt: -1 });
     if (!jobs) {
       return res.status(404).json({
-        message: "Jobs not found.",
+        message: "Jobs not found......",
         success: false,
       });
     }
@@ -93,7 +93,7 @@ export const getJobById = async (req, res) => {
     });
     if (!job) {
       return res.status(404).json({
-        message: "Jobs not found.",
+        message: "Jobs not found....",
         success: false,
       });
     }
@@ -113,7 +113,7 @@ export const getAdminJobs = async (req, res) => {
     });
     if (!jobs) {
       return res.status(404).json({
-        message: "Jobs not found.",
+        message: "Jobs not found......",
         success: false,
       });
     }

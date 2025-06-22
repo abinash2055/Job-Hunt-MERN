@@ -20,7 +20,7 @@ const HeroSection = () => {
       <div className='flex flex-col gap-5 my-10'>
         <span className=' mx-auto px-4 py-2 rounded-full bg-gray-100 text-[#F83002] font-medium'>No. 1 Job Hunt Website</span>
         <h1 className='text-5xl font-bold'>Search, Apply & <br /> Get Your <span className='text-[#6A38C2]'>Dream Jobs</span></h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid aspernatur temporibus nihil tempora dolor!</p>
+        <p>Passionate and detail-oriented IT graduate with hands-on experience in React Native, JavaScript, and mobile app development. Skilled in building responsive, user-friendly interfaces and integrating backend services like Firebase and REST APIs. Known for strong problem-solving abilities, a team-oriented mindset, and a commitment to continuous learning. Actively seeking full-time, remote, or internship opportunities to contribute to innovative projects and grow as a developer in a dynamic tech environment.</p>
         <div className='flex w-[40%] shadow-lg border border-gray-200 pl-3 rounded-full items-center gap-4 mx-auto'>
           <input
             type="text"
